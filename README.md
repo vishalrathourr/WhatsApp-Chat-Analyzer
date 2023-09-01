@@ -53,5 +53,7 @@ This project is for educational and personal use only. Please respect privacy an
 Enjoy analyzing your WhatsApp chat data with this tool! If you have any questions or need assistance, feel free to contact us.
 
 Vishal Rathour
-E-Mail: vishdsc@gmail.com
+
+EMail: vishdsc@gmail.com
+
 Github: https://github.com/vishalrathourr
