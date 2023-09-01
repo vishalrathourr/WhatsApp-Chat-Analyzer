@@ -6,13 +6,26 @@ from PIL import Image
 
 image = Image.open('pngtree-whatsapp-icon-png-image.png')
 
-st.sidebar.image(image,output_format='PNG', width=100)
+st.sidebar.image(image,output_format='PNG', width=70)
 st.sidebar.title("WhatsApp Chat Analyzer :iphone:")
 
-welcome = st.chat_message("assistant")
-welcome.write("Hello! Welcome to WhatsApp Chat Analyzer")
+import streamlit as st
 
-uploaded_file = st.sidebar.file_uploader("Choose a file")
+# Add a title to your Streamlit app
+st.image(image,output_format='PNG', width=70)
+
+st.title("WhatsApp Chat Analyzer")
+
+welcome = st.chat_message("assistant")
+welcome.write("Hello! Welcome to WhatsApp Chat Analyzer:man-raising-hand:")
+
+# Use HTML/CSS to set the font to monospace (Courier New)
+st.write("**Limitation**: This tool requires the following date and time format:<span style='font-family: Courier New, monospace;'>  26/02/23, 5:15 pm.</span>", unsafe_allow_html=True)
+
+st.write("If your chat export uses a different format, the tool may not work correctly.:expressionless:")
+
+
+uploaded_file = st.sidebar.file_uploader(":file_folder: Choose a file")
 if uploaded_file is not None:
     bytes_data = uploaded_file.getvalue()
     data=bytes_data.decode("utf-8")
@@ -25,10 +38,11 @@ if uploaded_file is not None:
     user_list = df['user'].unique().tolist()
     user_list.remove('group_notification')
     user_list.sort()
-    user_list.insert(0,"All")
+    user_list.insert(0,"Group")
     selected_user = st.sidebar.selectbox("Show Analysis For: ", user_list)
     
     if st.sidebar.button("Show Analysis"):
+        
         
 #----> Stats area
         num_messages ,words, num_media, num_links = helper.fetch_stats(selected_user, df)
@@ -102,7 +116,7 @@ if uploaded_file is not None:
                     
 #----> Most Busy Users in chat(Only for group chat level)
 
-        if selected_user=='All':
+        if selected_user=='Group':
             st.title("Most Busy Users")
             top5 , top5perc = helper.most_busy_users(df)
             fig, ax = plt.subplots()
@@ -143,9 +157,23 @@ if uploaded_file is not None:
         
         st.dataframe(emoji_df,width=100, height=500,use_container_width=True)
 
-
-st.sidebar.markdown("---")
+# st.sidebar.markdown("---")
+# Add a horizontal line (separator) in the sidebar
+st.sidebar.markdown("<hr>", unsafe_allow_html=True)
 st.sidebar.markdown("Project by: Vishal Rathour")
-            
+
+# Add your contact links in a list
+contact_links = [
+    {"text": "Email", "link": "mailto:vishdsc@gmail.com"},
+    {"text": "LinkedIn", "link": "https://www.linkedin.com/in/vishalrathourr"},
+    {"text": "GitHub", "link": "https://github.com/vishalrathourr"},
+]
+
+# Display the contact links in the sidebar
+for link in contact_links:
+    st.sidebar.markdown(f"[{link['text']}]({link['link']})")
+
+
+    
 
     
