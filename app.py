@@ -144,9 +144,8 @@ if uploaded_file is not None:
         st.dataframe(emoji_df,width=100, height=500,use_container_width=True)
 
 
-st.sidebar.text('Project by: Vishal Rathour') 
 st.sidebar.markdown("---")
-st.sidebar.markdown("Your Name")
+st.sidebar.markdown("Project by: Vishal Rathour")
             
 
     
