@@ -5,7 +5,7 @@ import seaborn as sns
 from PIL import Image
 import time 
 
-image = Image.open('E:\Python Projects\WhatsApp Chat Analysis\pngtree-whatsapp-icon-png-image.png')
+image = Image.open('pngtree-whatsapp-icon-png-image.png')
 
 st.sidebar.image(image,output_format='PNG', width=100)
 st.sidebar.title("WhatsApp Chat Analyzer :iphone:")
