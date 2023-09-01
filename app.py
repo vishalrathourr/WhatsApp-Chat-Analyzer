@@ -25,7 +25,7 @@ if uploaded_file is not None:
     user_list = df['user'].unique().tolist()
     user_list.remove('group_notification')
     user_list.sort()
-    user_list.insert(0,"Group")
+    user_list.insert(0,"All")
     selected_user = st.sidebar.selectbox("Show Analysis For: ", user_list)
     
     if st.sidebar.button("Show Analysis"):
@@ -102,7 +102,7 @@ if uploaded_file is not None:
                     
 #----> Most Busy Users in chat(Only for group chat level)
 
-        if selected_user=='Group':
+        if selected_user=='All':
             st.title("Most Busy Users")
             top5 , top5perc = helper.most_busy_users(df)
             fig, ax = plt.subplots()
