@@ -9,9 +9,8 @@ image = Image.open('pngtree-whatsapp-icon-png-image.png')
 st.sidebar.image(image,output_format='PNG', width=100)
 st.sidebar.title("WhatsApp Chat Analyzer :iphone:")
 
-#welcome = st.chat_message("assistant")
-#welcome.write("Hello! Welcome to WhatsApp Chat Analyzer")
-st.write("Hello! Welcome to WhatsApp Chat Analyzer")
+welcome = st.chat_message("assistant")
+welcome.write("Hello! Welcome to WhatsApp Chat Analyzer")
 
 uploaded_file = st.sidebar.file_uploader("Choose a file")
 if uploaded_file is not None:
