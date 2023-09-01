@@ -6,5 +6,3 @@ wordcloud
 pandas
 emoji
 Pillow
-Counter
-re
