@@ -12,7 +12,7 @@ st.sidebar.title("WhatsApp Chat Analyzer :iphone:")
 import streamlit as st
 
 # Add a title to your Streamlit app
-st.image(image,output_format='PNG', width=70)
+# st.image(image,output_format='PNG', width=70)
 
 st.title("WhatsApp Chat Analyzer")
 
