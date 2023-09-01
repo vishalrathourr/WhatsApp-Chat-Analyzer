@@ -3,7 +3,6 @@ import preprocessor, helper
 import matplotlib.pyplot as plt
 import seaborn as sns
 from PIL import Image
-import time 
 
 image = Image.open('pngtree-whatsapp-icon-png-image.png')
 
