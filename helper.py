@@ -9,7 +9,7 @@ extractor = URLExtract()
 
 def fetch_stats(selected_user, df):
     
-    if selected_user != 'Group':
+    if selected_user != 'All':
         df = df[df['user']== selected_user]
         
     # 1. Fetch number of messages
@@ -48,7 +48,7 @@ def create_wordcloud(selected_user,df):
     f = open('stop_hinglish.txt', 'r')
     stop_words = f.read()
 
-    if selected_user != 'Group':
+    if selected_user != 'All':
         df = df[df['user'] == selected_user]
 
     temp = df[df['user'] != 'group_notification']
@@ -71,7 +71,7 @@ def most_common_words(selected_user,df):
     f = open('stop_hinglish.txt','r')
     stop_words = f.read()
 
-    if selected_user != 'Group':
+    if selected_user != 'All':
         df = df[df['user'] == selected_user]
 
     temp = df[df['user'] != 'group_notification']
@@ -89,7 +89,7 @@ def most_common_words(selected_user,df):
 
 
 def emoji_helper(selected_user, df):
-    if selected_user != 'Group':
+    if selected_user != 'All':
         df = df[df['user'] == selected_user]
         
     emojis = []
@@ -101,7 +101,7 @@ def emoji_helper(selected_user, df):
 
 
 def mothly_timeline(selected_user, df):
-    if selected_user != 'Group':
+    if selected_user != 'All':
         df = df[df['user'] == selected_user]
         
     timeline=df.groupby(['year','month_num','month']).count()['message'].reset_index()
@@ -114,7 +114,7 @@ def mothly_timeline(selected_user, df):
     return timeline
 
 def daily_timeline(selected_user, df):
-    if selected_user != 'Group':
+    if selected_user != 'All':
         df = df[df['user'] == selected_user]   
         
     daily_timeline=df.groupby(['only_date']).count()['message'].reset_index()  
@@ -123,20 +123,20 @@ def daily_timeline(selected_user, df):
 
 
 def weekly_activity_map(selected_user, df):
-    if selected_user != 'Group':
+    if selected_user != 'All':
         df = df[df['user'] == selected_user] 
         
     return df['day_name'].value_counts()  
     
 
 def month_activity_map(selected_user, df):
-    if selected_user != 'Group':
+    if selected_user != 'All':
         df = df[df['user'] == selected_user] 
         
     return df['month'].value_counts()  
 
 def activity_heatmap(selected_user, df):
-    if selected_user != 'Group':
+    if selected_user != 'All':
         df = df[df['user'] == selected_user] 
     
     user_heatmap = df.pivot_table(index='day_name',columns='period', values='message', aggfunc='count').fillna(0)    
