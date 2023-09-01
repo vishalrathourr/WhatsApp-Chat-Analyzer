@@ -11,7 +11,6 @@ st.sidebar.title("WhatsApp Chat Analyzer :iphone:")
 
 welcome = st.chat_message("assistant")
 welcome.write("Hello! Welcome to WhatsApp Chat Analyzer")
-time.sleep(5)
 
 
 uploaded_file = st.sidebar.file_uploader("Choose a file")
