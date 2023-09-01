@@ -28,9 +28,9 @@ This Python project allows you to analyze your WhatsApp group or individual chat
 
 2. Upload your WhatsApp chat export text file (typically named `chat.txt`).
 
-3. Select the *All* or *Select any specific user* and Click on the **Show Analysis** button you're interested in, and the tool will generate the corresponding statistics and visualizations.
+3. Select the *"All"* or *"Select any specific user"* and Click on the **Show Analysis** button you're interested in, and the tool will generate the corresponding statistics and visualizations.
 
-4. You can see the generated visualizations and reports.
+4. Now you can see the generated visualizations and reports.
 
 
 ## Project Structure
@@ -52,6 +52,6 @@ This project is for educational and personal use only. Please respect privacy an
 
 Enjoy analyzing your WhatsApp chat data with this tool! If you have any questions or need assistance, feel free to contact us.
 
-[Vishal Rathour]
-[vishdsc@gmail.com]
-[https://github.com/vishalrathourr]
+Vishal Rathour
+E-Mail: vishdsc@gmail.com
+Github: https://github.com/vishalrathourr
