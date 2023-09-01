@@ -2,6 +2,7 @@
 
 This Python project allows you to analyze your WhatsApp group or individual chat by uploading a text file exported from WhatsApp. The tool provides various statistics and visualizations to help you understand your chat activity. You can also access these features through the [web application](https://whatsanalysis.streamlit.app/).
 
+![image](https://github.com/vishalrathourr/WhatsApp-Chat-Analyzer/assets/126953378/c67bd595-f183-4d3e-867a-006605c21a1c)
 
 ## Features
 
