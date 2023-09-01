@@ -6,7 +6,7 @@ from PIL import Image
 
 image = Image.open('pngtree-whatsapp-icon-png-image.png')
 
-st.sidebar.image(image,output_format='PNG', width=70)
+st.sidebar.image(image,output_format='PNG', width=50)
 st.sidebar.title("WhatsApp Chat Analyzer :iphone:")
 
 import streamlit as st
